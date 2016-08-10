@@ -6,17 +6,23 @@ public class Main {
 
     public static void main(String[] args) {
 
+
         long input = 1532300001;
-        int iterator =0;
+        Main algorithm = new Main();
 
+
+        int iterator = 0;
         double output = input;
-
-        while(output>999 && iterator<=4){
-            output=output/1024;
+        while (output > 999 && iterator <= 4) {
+            output = output / 1024;
             iterator++;
         }
 
-        switch(iterator){
+        algorithm.printValue(iterator,output);
+    }
+
+    public void printValue(int iterator, double output) {
+        switch (iterator) {
             case 0:
                 System.out.println(output + " Bytes");
                 break;
@@ -33,7 +39,5 @@ public class Main {
                 System.out.println(output + " TBytes");
                 break;
         }
-
-
     }
 }
